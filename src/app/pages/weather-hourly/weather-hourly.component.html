@@ -1,0 +1,12 @@
+<section>
+    <header>
+        <h2>{{countryName}}</h2>
+        <h2>{{date}}</h2>
+    </header>
+    <div class="container">
+        <app-each-hour *ngFor="let w of Weather?.hour" [hourlyWeather]="w"></app-each-hour>
+    </div>
+    <footer>
+        <a [routerLink]="['']">Home</a>
+    </footer>
+</section>

@@ -1,0 +1,23 @@
+@import '../../../styles.scss';
+section{
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        color: $lightGrey;
+        font-size: 30px;
+        a{
+            text-decoration: none;
+            color: $lightGrey;
+            &:hover{
+                color: $darkBlue;
+               text-decoration: underline;
+
+            }
+        }
+    }
+    #canvas{
+        padding: 20px;
+    }
+}

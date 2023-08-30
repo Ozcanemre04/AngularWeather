@@ -1,0 +1,43 @@
+@import '../../../styles.scss';
+section{ 
+    header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        padding: 20px;
+        color:$lightBlue;
+        h2{
+            background-color: $darkBlue;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    }
+    .container{
+        display: flex;
+        overflow-x: hidden;
+        gap: 20px;
+        overflow-x: auto;
+        @include scrollbars(.5em,$darkBlue);
+        height: 500px;
+        padding: 10px;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        border-radius: 20px;
+        a{
+            background-color: $darkBlue;
+            border-radius: 10px;
+            padding: 10px;
+            color: $lightBlue;
+            text-decoration: none;
+            font-size: 18px;
+            &:hover{
+                  text-decoration: underline;
+            }
+        }
+        
+    }
+}

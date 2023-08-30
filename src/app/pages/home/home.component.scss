@@ -1,0 +1,42 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
+    margin-inline: auto;
+
+
+app-input{
+    width: 100%;
+}
+app-weather{
+    @extend app-input;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+app-weather-daily{
+    @extend app-input;
+}
+}
+
+
+
+
+
+@media only screen and (max-width: 1285px) {
+    section{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 1080px) {
+    section{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    section{
+        width: 90%;
+    }
+}

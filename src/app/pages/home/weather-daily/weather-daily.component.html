@@ -1,0 +1,16 @@
+<section *ngIf="Weather !== undefined">
+    <header>
+            <h3>Daily Forecast</h3>
+            <a [routerLink]="['/Name',Weather.location.name,'graph']">Graph</a>
+    </header>
+    <div class="container">
+
+        <a [routerLink]="['/Name',Weather.location.name,'day',w.date]" *ngFor="let w of Weather?.forecast?.forecastday">
+            <h3>{{w.date|date:'EEE'}}</h3>
+            <img [src]="w.day.condition.icon" alt="">
+            <p>{{w.day.condition.text}}</p>
+            <p *ngIf="!fahrenheit">{{w.day.maxtemp_c}}°/{{w.day.mintemp_c}}°</p>
+            <p *ngIf="fahrenheit">{{w.day.maxtemp_c|fahrenheit}}°/{{w.day.mintemp_c|fahrenheit}}°</p>
+        </a>
+    </div>
+</section>

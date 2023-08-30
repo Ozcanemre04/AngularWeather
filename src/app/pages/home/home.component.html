@@ -1,0 +1,5 @@
+<section>
+    <app-input (InputEvent)="onChange($event)"></app-input>
+    <app-weather [Weather]="gotweather" (fahrenheitEvent)="convertFahrenheit($event)"></app-weather>
+    <app-weather-daily [Weather]="gotweather" [fahrenheit]="fahrenheit"></app-weather-daily>
+</section>

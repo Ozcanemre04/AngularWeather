@@ -1,0 +1,102 @@
+@import '../../../../styles.scss';
+.container{
+    padding: 30px;
+    background-color: rgb(255, 255, 255,0.9);
+    border-radius: 20px;
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        h2{
+            font-weight: 300;
+            color: $lightGrey;
+        }
+        button{
+            padding: 8px;
+            color:$darkBlue;
+            border: none;
+            border-radius: 12px;
+            background-color: #E1F0FA;
+        }
+        
+    }
+    .left-right{
+        display: flex;
+        flex-wrap: wrap;
+        .left{
+            margin: 10px 20px;
+            h3{
+                font-size: 24px;
+                color: $darkBlue;
+                font-weight: bold;
+            }
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                img{
+                    width: 100px;
+                    margin-left: -10px;
+                }
+                p{
+                    font-size: 70px;
+                    font-weight:lighter;
+                    color: $darkBlue;
+                }
+            }
+            p{
+                font-weight: bold;
+                font-size: 18px;
+                color: $lightGrey;
+            }
+            
+        }
+        .right{
+            
+            margin: 10px 32px;
+            margin-left: 10rem;
+            h3{
+                font-size: 20px;
+                color: $darkBlue;
+            }
+            div{
+                display: flex;
+                margin-top: 20px;
+                font-size: 16px;
+                align-items: center;
+                p{
+                    &:first-of-type{
+                        margin-inline: 10px;
+                        color: $lightBlue;
+                    }
+                    &:last-of-type{
+                        color:$darkBlue;
+                    }
+                }
+                
+            }
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 928px) {
+    .container{
+        .left-right{
+            .right{
+                margin-left: 80px;
+            }
+        }
+    }
+  }
+@media only screen and (max-width: 828px) {
+    .container{
+        .left-right{
+            .right{
+                margin-left: 20px;
+            }
+        }
+    }
+  }

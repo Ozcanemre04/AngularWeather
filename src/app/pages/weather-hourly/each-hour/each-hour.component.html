@@ -1,0 +1,19 @@
+<div>
+    <img [src]="hourlyWeather.condition.icon" alt="">
+    <i>{{hourlyWeather.condition.text}}</i>
+    <b>{{hourlyWeather.temp_c}}°C</b>
+    <div>
+        <ng-icon name="matWaterDrop" color="#96D3FB"></ng-icon>
+        <p>Humidity</p>
+        <p>{{hourlyWeather.humidity}}%</p>
+    </div>
+    <div>
+         <ng-icon name="matAir" color="#96D3FB"></ng-icon>
+         <p>Wind</p>
+         <p>
+            {{hourlyWeather.wind_kph}}kph
+            <ng-icon color="#96D3FB" name="matArrowUpward" [ngStyle]="{ 'transform': 'rotate(' + hourlyWeather.wind_degree + 'deg)' }"></ng-icon>
+        </p>
+    </div>
+    <p class="hour">{{hourlyWeather.time|date:'shortTime'}}</p>
+</div>

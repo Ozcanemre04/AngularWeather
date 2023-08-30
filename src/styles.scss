@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body{
+    background-color: #E1F0FA;
+}
+
+
+$darkBlue:#49677A;
+$lightGrey:#B3BFC7;
+$lightBlue:#96D3FB;
+
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: $background-color;
+    }
+  
+    // For Internet Explorer
+    & {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }

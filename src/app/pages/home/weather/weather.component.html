@@ -1,0 +1,46 @@
+<div *ngIf="Weather !== undefined" class="container">
+ <header>
+    <h2>Current Weather</h2>
+    <button *ngIf="fahrenheit" (click)="convertFunction()">Fahrenheit</button>
+    <button *ngIf="!fahrenheit" (click)="convertFunction()">Celsius</button>
+ </header>
+ <div class="left-right">
+    <div class="left">
+         <h3>{{Weather.location.name}}</h3>
+         <div>
+             <img [src]="Weather.current.condition.icon" alt="Weather Icon">
+             <p *ngIf="!fahrenheit">{{Weather.current.temp_c}}°</p>
+             <p *ngIf="fahrenheit">{{Weather.current.temp_c|fahrenheit}}°</p>
+         </div>
+         <p>{{Weather.current.condition.text}}</p>
+    </div>
+
+    <div class="right">
+        <h3 *ngIf="!fahrenheit">Feels like {{Weather.current.feelslike_c}}°</h3>
+        <h3 *ngIf="fahrenheit">Feels like {{Weather.current.feelslike_c|fahrenheit}}°</h3>
+       
+        <div>
+            <ng-icon name="matWaterDrop" color="#96D3FB"></ng-icon>
+            <p>Humidity</p>
+            <p>{{Weather.current.humidity}}%</p>
+        </div>
+
+        <div>
+            <ng-icon name="matAir" color="#96D3FB"></ng-icon>
+            <p>Wind</p>
+            <p>
+                {{Weather.current.wind_kph}}kph
+                <ng-icon color="#96D3FB" name="matArrowUpward" [ngStyle]="{ 'transform': 'rotate(' + Weather.current.wind_degree + 'deg)' }"></ng-icon>
+            </p>
+        </div>
+
+        <div>
+            <ng-icon name="matCompress" color="#96D3FB"></ng-icon>
+            <p>Pressure</p>
+            <p>{{Weather.current.pressure_mb}}hPa</p>
+        </div>
+
+    </div>
+ </div>
+    
+</div>
